@@ -1,0 +1,10 @@
+{
+    "primary": {
+        "host": "testout.comuf.com",
+        "username": "a8171736",
+        "password": "lkylky123",
+        "path": "/public_html/igniteFAIR/",
+
+        "upload_on_save": false
+    }
+}

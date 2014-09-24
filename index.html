@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>igniteFAIR</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="import" href="components/bower_components/paper-button/paper-button.html">
+<link rel="import" href="components/bower_components/paper-dialog/paper-dialog.html">
+<link rel="import" href="components/bower_components/paper-dialog/paper-dialog-transition.html">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.isotope.js" type="text/javascript"></script>
+<script src="js/jquery.isotop.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery.gridrotator.js"></script>
+<script src="js/custom.js" type="text/javascript"></script>
+<script src="js/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+<script src="js/<imagesloaded class="pkgd "></imagesloaded>js" type="text/javascript"></script>
+<header>
+    <div class = "container">
+        <div class = "box logo" data-filter=".home">
+            <img src="img/logo.png">
+        </div>
+        <div class = "box current" data-filter=".home" >
+            HOME
+        </div>
+        <div class = "box" data-filter=".toronto" >
+            igniteFAIR TORONTO
+        </div>
+        <div class = "box" data-filter=".team" >
+            ABOUT
+        </div>
+        <div class = "box">
+            EXHIBITORS
+        </div>
+        <div class = "box">
+            CONTACT US
+        </div>
+    </div>
+</header>
+<body>
+    <paper-dialog heading="What is the igniteFAIR?" transition="paper-dialog-transition-bottom" role="dialog" aria-label="Dialog" tabindex="-1"
+    class="paper-dialog-transition paper-dialog-transition-bottom" style="display: none; max-width:70vw;">
+        <br><h4>igniteFAIR began in 2014 as a way to help students gather information about the hundreds of non-profit, youth-run, and
+        volunteer organizations from across Canada that provide opportunities for anyone to get involved. igniteFAIR will give you an
+        opportunity to speak with representatives from different organizations about programs, campaigns and anything else that may help
+        you make a decision about which organization(s) you would like to get involved with, as well as find inspiration and start feeling
+        empowered to take action. igniteFAIR is also an event where people will be motivated by amazing speakers and performers, all passionate
+        about taking action and igniting change within the local and international community.</h4>
+        <br><h4>Each organization has its own booth, staffed with representatives who can answer your questions and provide additional
+        materials on how you can volunteer. The two-day summit has attracted attention from across Canada, and hundreds of people will be
+        in attendance at the first fair in Richmond Hill, Ontario (igniteFAIR Greater Toronto Area). It is our hope that we are able to
+        ignite the passion in people to get involved and create change in their communities.</h4>
+        <paper-button label="Learn more about Organizers" dismissive="" role="button" tabindex="0" onclick="toggleDialog('paper-dialog-transition-center')"aria-label="Decline" style = "margin-right:10px"></paper-button>
+        <paper-button label="Exit" dismissive="" autofocus="" role="button" tabindex="0" aria-label="Accept"></paper-button>
+    </paper-dialog>
+    <paper-dialog heading="Who organizes igniteFAIR?" transition="paper-dialog-transition-center" role="dialog" aria-label="Dialog" tabindex="-1"
+    class="paper-dialog-transition paper-dialog-transition-center" style="display: none; max-width:70vw;">
+        <br><h4>Pledges for Change is an international youth-led, non-profit organization and movement that aims to
+        engage and empower people across Canada and around the world to become the leaders of tomorrow. As the largest
+        non-profit organization of its kind in Canada, they inspire people to take one action in support of a local or
+        global cause every two months that is featured. For each pledge to action made on their website, a dollar will
+        be donated to a registered charity in support of the featured cause.</h4>
+        <br><h4>Pledges for Change is a catalyst for change, giving people the inspiration and the support they need to make a positive
+        impact in their communities.</h4>
+        <br><h4>Founded in 2013 by Canada Top 20 Under 20 Recipient Brennan Wong, their goal is to empower thousands of people around the
+        globe to make a difference in their communities, just by simply committing to take action. They believe that we can all work together to conquer
+        what was once impossible and ultimately change our world for the better!</h4>
+        <paper-button label="Learn more about Event" dismissive="" role="button" tabindex="0" onclick="toggleDialog('paper-dialog-transition-bottom')"aria-label="Decline" style = "margin-right:10px"></paper-button>
+        <paper-button label="Exit" dismissive="" autofocus="" role="button" tabindex="0" aria-label="Accept"></paper-button>
+    </paper-dialog>
+<section class = "move">
+<div class = "info">
+    <div class = "box box-center crop padding-box home team">
+        <h4 style="color:#fff; font-size:24px;"><b>igniteFAIR</b> is a youth-led movement of our time,
+            engaging and empowering people across Canada to learn more about
+            philanthropy and volunteerism, become inspired and get involved.
+            Today's generation has the power to create change in communities across the country!
+        </h4>
+        <div style ="margin-top:2vh;">
+            <paper-button label="LEARN MORE" raisedButton role="button" onclick="toggleDialog('paper-dialog-transition-bottom')"></paper-button>
+        </div>
+    </div>
+    <!--maps-->
+    <div class = "box box-left padding-box home toronto">
+        <h1>Time</h1>
+        <h2>Saturday, October 25, 2014<br>
+            <h2 style ="color:#2e9ca9;">12:00PM - 4:00PM</h2> </h2>
+        </div>
+        <div class = "box box-left padding-box home toronto">
+            <h1>Location</h1>
+            <h2>Richmond Hill Centre for the Performing Arts </h2>
+            <style type="text/css">
+                /* Set a size for our map container, the Google Map will take up 100% of this container */
+                #map {
+                    width: 100%;
+                    height: 300px;
+                }
+            </style>
+            <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
+
+            <script type="text/javascript">
+                    // When the window has finished loading create our google map below
+
+                    google.maps.event.addDomListener(window, 'load', init);
+
+                    function init() {
+                        // Basic options for a simple Google Map
+                        // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                        var mapOptions = {
+                            // How zoomed in you want the map to start at (always required)
+                            zoom: 17,
+
+                           // The latitude and longitude to center the map (always required)
+                           center: new google.maps.LatLng(43.877386, -79.43893), // New York
+
+                            // How you would like to style the map.
+                           // This is where you would paste any style found on Snazzy Maps.
+                           styles: [{'featureType':'water','stylers':[{'visibility':'on'},{'color':'#acbcc9'}]},{'featureType':'landscape','stylers':[{'color':'#f2e5d4'}]},{'featureType':'road.highway','elementType':'geometry','stylers':[{'color':'#c5c6c6'}]},{'featureType':'road.arterial','elementType':'geometry','stylers':[{'color':'#e4d7c6'}]},{'featureType':'road.local','elementType':'geometry','stylers':[{'color':'#fbfaf7'}]},{'featureType':'poi.park','elementType':'geometry','stylers':[{'color':'#c5dac6'}]},{'featureType':'administrative','stylers':[{'visibility':'on'},{'lightness':33}]},{'featureType':'road'},{'featureType':'poi.park','elementType':'labels','stylers':[{'visibility':'on'},{'lightness':20}]},{},{'featureType':'road','stylers':[{'lightness':20}]}]
+                       };
+
+
+                        // Get the HTML DOM element that will contain your map
+                        // We are using a div with id="map" seen below in the <body>
+                        var mapElement = document.getElementById('map');
+
+                        // Create the Google Map using out element and options defined above
+                        var map = new google.maps.Map(mapElement, mapOptions);
+                        var marker = new google.maps.Marker({
+                            position: center,
+                            map: map,
+                            title: 'Hello World!'
+                        });
+                    }
+                </script>
+                <div id="map">
+                </div>
+            </div>
+            <div class = "box box-left padding-box home toronto">
+                <h1>Admission</h1>
+                <h2>Free</h2>
+            </div>
+            <!--ABOUT-->
+            <div class = "box box-center padding-box team">
+                <h3>igniteFAIR would not be possible without the hard work of the event's national
+                    organizing committee. This year's committee is made up of talented young people from
+                    across the country who have been recognized as recipients of various awards, including
+                    Canada's Top 20 Under 20 Award and EF's Global Citizen Scholarship. They are all passionate
+                    about empowering others to get involved and bring change to their communities!
+                </h3>
+            </div>
+            <div class = "box box-left team people">
+                <div class = "img">
+                    <img src="img/team/6.jpg">
+                </div>
+                <div class = "padding-box">
+                    <h1>Brennan Wong</h1>
+                    <h5>Chair</h5>
+                </div>
+            </div>
+            <div class = "box box-left team people">
+                <div class = "img">
+                    <img src="img/team/4.jpg">
+                </div>
+                <div class = "padding-box">
+                    <h1>Julia Cappellacci</h1>
+                    <h5>Organizations Coordinator/ Logistics</h5>
+                </div>
+            </div>
+            <div class = "box box-left team people">
+                <div class = "img">
+                    <img src="img/team/7.jpg">
+                </div>
+                <div class = "padding-box">
+                    <h1>Elliott Choi</h1>
+                    <h5>Sponsorships</h5>
+                </div>
+            </div>
+            <div class = "box box-left team people">
+                <div class = "img">
+                    <img src="img/team/2.jpg">
+                </div>
+                <div class = "padding-box">
+                    <h1>Manit Ginoya</h1>
+                    <h5>Organizations Coordinator /Logistics</h5>
+                </div>
+            </div>
+            <div class = "box box-left team people">
+                <div class = "img">
+                    <img src="img/team/1.jpg">
+                </div>
+                <div class = "padding-box">
+                    <h1>Newton Zheng</h1>
+                    <h5>Sponsorships/Logistics</h5>
+                </div>
+            </div>
+            <div class = "box box-left team people">
+                <div class = "img">
+                    <img src="img/team/5.jpg">
+                </div>
+                <div class = "padding-box">
+                    <h1>Jennifer Cheng</h1>
+                    <h5>Marketing</h5>
+                </div>
+            </div>
+            <div class = "box box-left team people">
+                <div class = "img">
+                    <img src="img/team/3.jpg">
+                </div>
+                <div class = "padding-box">
+                    <h1>Emma Power</h1>
+                    <h5>igniteFAIR Atlantic Canada</h5>
+                </div>
+            </div>
+            <!--Details-->
+            <div class = "box box-left padding-box">
+                <h1>Title</h1>
+                <h2>Author</h2>
+            </div>
+            <div class = "box box-left padding-box">
+                <h1>Title</h1>
+                <h2>Author</h2>
+            </div>
+            <div class = "box box-left padding-box">
+                <h1>Title</h1>
+                <h2>Author</h2>
+            </div>
+            <div class = "box box-center padding-box">
+                <h1>Title</h1>
+                <h2>Author</h2>
+            </div>
+            </div>
+        </section>
+    </body>
+    <script type="text/javascript">
+
+        function toggleDialog(transition) {
+          var dialog = document.querySelector('paper-dialog[transition=' + transition + ']');
+          dialog.toggle();
+      }
+  </script>
+  </html>
